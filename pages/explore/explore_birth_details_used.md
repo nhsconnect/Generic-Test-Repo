@@ -30,7 +30,7 @@ Bundle Resource Implementation
 
 |-|Level 1|Bundle Resource|--|Level 2| None|---|Level 3|NHSD-Bundle-1|
 
-[View All](explore_birth_details.html) -  [View Used elements only](explore_birth_details_used.html)
+|[View All](explore_birth_details.html#mapping-for-bundle)|    |[View Used elements only](explore_birth_details_used.html#mapping-for-bundle)|
 
 |  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for DCH Implementation** |
 |  :------ | :------ | ------ | :------ | :------ |
