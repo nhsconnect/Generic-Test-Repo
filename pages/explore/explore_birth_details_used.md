@@ -46,7 +46,7 @@ Bundle Resource Implementation
 
 |>|Level 1|[MessageHeader Resource](http://hl7.org/fhir/stu3/messageHeader.html)|>|Level 2| None|>|Level 3|[NHSD-MessageHeader-1 Profile](http://xxx)|
 
-|[View All FHIR Elements](explore_birth_details.html#mapping-for-messageheader)|    |[View Used FHIR Elements Only](explore_birth_details_used.html#mapping-for-messageheader)|
+|**[View All FHIR Elements](explore_birth_details.html#mapping-for-messageheader)**|    |**View Used FHIR Elements**|
 
 |  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for XXX Implementation** |
 |  :------ | :------ | ------ | :------ | :------ |
