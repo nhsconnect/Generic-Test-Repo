@@ -56,7 +56,7 @@ The Child Health Event data items are fulfilled by elements within the FHIR reso
 
 |>|Level 1|[MessageHeader Resource](http://hl7.org/fhir/stu3/messageHeader.html)|>|Level 2| None|>|Level 3|[NHSD-MessageHeader-1 Profile](http://xxx)|
 
-|[View All FHIR Elements](explore_birth_details.html#mapping-for-messageHeader)|    |[View Used FHIR Elements Only](explore_birth_details_used.html#mapping-for-messageHeader)|
+|[View All FHIR Elements](explore_birth_details.html#mapping-for-messageheader)|    |[View Used FHIR Elements Only](explore_birth_details_used.html#mapping-for-messageheader)|
 
 
 | DCH Data Item                       | FHIR resource element                                                   | Mandatory/Required/Optional |
