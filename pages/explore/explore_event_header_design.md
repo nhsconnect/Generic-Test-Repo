@@ -1,10 +1,10 @@
 ---
-title: Digital Child Health Event Header Design
+title: Digital Child Health (TEST) Event Header Design
 keywords:  messaging, bundles
 tags: [fhir,messaging]
 sidebar: foundations_sidebar
 permalink: explore_event_header_design.html
-summary: "The standard event header information applicable to Digital Child Health (DCH) event messages"
+summary: "The standard event header information applicable to Digital Child Health (TEST) (DCH) event messages"
 ---
 
 ## Event header information ##
@@ -28,7 +28,7 @@ This event header information must consist of the following **mandatory** items 
 | event published date                   | DCH-MessageHeader-1         | timestamp                                                                   |
 | a publication reference number         | DCH-MessageHeader-1         | The resource identifier for the MessageHeader, which will use a UUID format |
 
-The remaining resources in the bundle depend on the Digital Child Health Event listed under the [Messages](explore.html) section.
+The remaining resources in the bundle depend on the Digital Child Health (TEST) Event listed under the [Messages](explore.html) section.
 
 
 
