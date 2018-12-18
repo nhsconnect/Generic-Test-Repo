@@ -24,7 +24,6 @@ The following FHIR profiles are used to form the Birth Details Event Message Bun
 
 The Child Health Event data items are fulfilled by elements within the FHIR resources listed below:
 
-Bundle Resource Implementation
 
 ## Mapping for Bundle ##
 
@@ -40,18 +39,18 @@ Bundle Resource Implementation
 |  - implicitRules | 0..1 | Not Used | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri) | A set of rules under which this content was created |
 |  - language | 0..1 | Not Used | [Code](http://hl7.org/fhir/stu3/datatypes.html#code) | [Language of the resource content . Binding (extensible): A human language. ( http://hl7.org/fhir/stu3/valueset-languages.html )](http://hl7.org/fhir/stu3/valueset-languages.html) |
 |  - identifier | 0..1 | Not Used | [Identifier](http://hl7.org/fhir/stu3/datatypes.html#identifier) | Persistent identifier for the bundle |
-|  - - use | 0..1 | Not Used | [Code](http://hl7.org/fhir/stu3/datatypes.html#code) | [usual : official <code>&amp;#124;</code> temp : secondary (If known) Binding (required): Identifies the purpose for this identifier, if known . ( http://hl7.org/fhir/stu3/valueset-identifier-use.html )](http://hl7.org/fhir/stu3/valueset-identifier-use.html) |
+|  - - use | 0..1 | Not Used | [Code](http://hl7.org/fhir/stu3/datatypes.html#code) | [usual : official : temp : secondary (If known) Binding (required): Identifies the purpose for this identifier, if known . ( http://hl7.org/fhir/stu3/valueset-identifier-use.html )](http://hl7.org/fhir/stu3/valueset-identifier-use.html) |
 |  - - type | 0..1 | Not Used | [CodeableConcept](http://hl7.org/fhir/stu3/datatypes.html#codeableconcept) | Description of identifier<br/>Binding (extensible): A coded type for an identifier that can be used to determine which identifier to use for a specific purpose. ( http://hl7.org/fhir/stu3/valueset-identifier-type.html ) |
 |  - - system | 1..1 | Not Used | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri) | The namespace for the identifier value |
 |  - - value | 1..1 | Not Used | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | The value that is unique |
 |  - - period | 0..1 | Not Used | [Period](http://hl7.org/fhir/stu3/datatypes.html#period) | Time period when id is/was valid for use<br/>Constraint (per-1): If present, start SHALL have a lower value than end |
 |  - - assigner | 0..1 | Not Used | [Reference](http://hl7.org/fhir/stu3/references.html) | Organization that issued id (may be just text)<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
 |   |  | Not Used | CareConnect-NHSD-Organization-1 |  |
-|  - type | 1..1 | Mandatory | [Code](http://hl7.org/fhir/stu3/datatypes.html#code) | document : message : transaction : transaction-response : batch : batch-response : history : searchset : collection<br/>Fixed Value: message<br/>Binding (required): Indicates the purpose of a bundle - how it was intended to be used. (http://hl7.org/fhir/stu3/valueset-bundle-type.html )<br/><span style="color:red">Fixed Value: message</span>. |
+|  - type | 1..1 | Mandatory | [Code](http://hl7.org/fhir/stu3/datatypes.html#code) | document : message : transaction : transaction-response : batch : batch-response : history : searchset : collection<br/>Binding (required): Indicates the purpose of a bundle - how it was intended to be used. (http://hl7.org/fhir/stu3/valueset-bundle-type.html )<br/>Fixed Value: "message" |
 |  - entry | 1..* | Mandatory | [BackboneElement](http://hl7.org/fhir/stu3/backboneelement.html) | Entry in the bundle - will have a resource, or information<br/>Constraint (bdl-8): fullUrl cannot be a version specific reference<br/>Constraint (bdl-5): Must Be A Resource Unless There'S A Request Or Response |
 |  - - modifierExtension | 0..* | Not Used | [Extension](http://hl7.org/fhir/stu3/extensibility.html#Extension) | Extensions that cannot be ignored<br/>Constraint (ext-1): Must have either extensions or value[x], not both |
 |  - - fullUrl | 0..1 | Mandatory | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri) | Absolute URL for resource (server address, or UUID/OID). This MUST be a UUID prefixed by urn:uuid: |
-|  - - resource | 1..1 | Mandatory | [Resource](http://hl7.org/fhir/stu3/resource.html) | A resource in the bundle |
+|  - - resource | 1..1 | Mandatory | [Resource](http://hl7.org/fhir/stu3/resource.html) | A resource in the bundle. This MUST be to the message Header resource profiled as NHSD-MessageHeader-1 |
 
 
 
