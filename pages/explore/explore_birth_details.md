@@ -52,7 +52,11 @@ The Child Health Event data items are fulfilled by elements within the FHIR reso
 |  - - fullUrl | 0..1 | Mandatory | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri) | Absolute URL for resource (server address, or UUID/OID). This MUST be a UUID prefixed by urn:uuid: |
 |  - - resource | 1..1 | Mandatory | [Resource](http://hl7.org/fhir/stu3/resource.html) | A resource in the bundle. This MUST be to the message Header resource profiled as NHSD-MessageHeader-1 |
 
+## Mapping for MessageHeader ##
 
+|>|Level 1|[MessageHeader Resource](http://hl7.org/fhir/stu3/messageHeader.html)|>|Level 2| None|>|Level 3|[NHSD-MessageHeader-1 Profile](http://xxx)|
+
+|[View All FHIR Elements](explore_birth_details.html#mapping-for-messageHeader)|    |[View Used FHIR Elements Only](explore_birth_details_used.html#mapping-for-messageHeader)|
 
 
 | DCH Data Item                       | FHIR resource element                                                   | Mandatory/Required/Optional |
