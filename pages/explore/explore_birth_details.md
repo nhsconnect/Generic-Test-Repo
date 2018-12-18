@@ -29,7 +29,7 @@ The Child Health Event data items are fulfilled by elements within the FHIR reso
 
 |>|Level 1|[Bundle Resource](http://hl7.org/fhir/stu3/bundle.html)|>|Level 2| None|>|Level 3|[NHSD-Bundle-1 Profile](http://xxx)|
 
-|[View All FHIR Elements](explore_birth_details.html#mapping-for-bundle)|    |[View Used FHIR Elements Only](explore_birth_details_used.html#mapping-for-bundle)|
+|[**View All FHIR Elements**](explore_birth_details.html#mapping-for-bundle)|    |[View Used FHIR Elements Only](explore_birth_details_used.html#mapping-for-bundle)|
 
 |  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for DCH Implementation** |
 |  :------ | :------ | ------ | :------ | :------ |
@@ -50,7 +50,7 @@ The Child Health Event data items are fulfilled by elements within the FHIR reso
 |  - entry | 1..* | Mandatory | [BackboneElement](http://hl7.org/fhir/stu3/backboneelement.html) | Entry in the bundle - will have a resource, or information<br/>Constraint (bdl-8): fullUrl cannot be a version specific reference<br/>Constraint (bdl-5): Must Be A Resource Unless There'S A Request Or Response |
 |  - - modifierExtension | 0..* | Not Used | [Extension](http://hl7.org/fhir/stu3/extensibility.html#Extension) | Extensions that cannot be ignored<br/>Constraint (ext-1): Must have either extensions or value[x], not both |
 |  - - fullUrl | 0..1 | Mandatory | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri) | Absolute URL for resource (server address, or UUID/OID). This MUST be a UUID prefixed by urn:uuid: |
-|  - - resource | 1..1 | Mandatory | [Resource](http://hl7.org/fhir/stu3/resource.html) | A resource in the bundle. This MUST be to the message Header resource profiled as NHSD-MessageHeader-1 |
+|  - - resource | 1..1 | Mandatory | [Resource](http://hl7.org/fhir/stu3/resource.html) | [A resource in the bundle. This MUST be to the message Header resource profiled as NHSD-MessageHeader-1](http://birth_details_used.html#mapping-for-messageHeader) |
 
 ## Mapping for MessageHeader ##
 
