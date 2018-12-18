@@ -3,7 +3,7 @@ title: Birth Details Event Message Bundle
 keywords:  messaging, bundles
 tags: [fhir,messaging]
 sidebar: foundations_sidebar
-permalink: explore_birth_details.html
+permalink: explore_birth_details_used.html
 summary: "The FHIR profiles used for the Birth Details Event Message Bundle"
 ---
 
@@ -28,9 +28,7 @@ Bundle Resource Implementation
 
 ## Mapping for Bundle ##
 
-|Level 1|Bundle Resource|
-|Level 2| None|
-|Level 3|NHSD-Bundle-1|
+|-|Level 1|Bundle Resource|--|Level 2| None|---|Level 3|NHSD-Bundle-1|
 
 [View All](explore_birth_details.html) -  [View Used elements only](explore_birth_details_used.html)
 
