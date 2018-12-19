@@ -68,7 +68,7 @@ The Child Health Event data items are fulfilled by elements within the FHIR reso
 |  - language | 0..1 | Not Used | [Code](http://hl7.org/fhir/stu3/datatypes.html#code) | [Language of the resource content Binding (extensible): A human language. ( http://hl7.org/fhir/stu3/valueset-languages.html )](http://hl7.org/fhir/stu3/valueset-languages.html) |
 |  - text | 0..1 | Not Used | [Narrative](http://hl7.org/fhir/stu3/narrative.html#Narrative) | Text summary of the resource, for human interpretation |
 |  - contained | 0..* | Not Used | [Resource](http://hl7.org/fhir/stu3/resource.html) | Contained, inline Resources |
-|  - extension (messageEventType) | 1..1 | Mandatory | https://fhir.nhs.uk/STU3/StructureDefinition/Extension-DCH-MessageEventType-1 | [The url attribute of the extension element MUST contain the value https://fhir.nhs.uk/STU3/StructureDefinition/Extension-DCH-MessageEventType-1 and populated as per specified here.](http://birth_details_used.html#extension-MessageUpdateType-1) |
+|  - extension (messageEventType) | 1..1 | Mandatory | [Extension-DCH-MessageEventType-1](https://fhir.nhs.uk/STU3/StructureDefinition/Extension-DCH-MessageEventType-1) | [The url attribute of the extension element MUST contain the value https://fhir.nhs.uk/STU3/StructureDefinition/Extension-DCH-MessageEventType-1 and populated as per specified here.](http://birth_details_used.html#extension-MessageUpdateType-1) |
 |  - modifierExtension | 0..* | Not Used | [Extension](http://hl7.org/fhir/stu3/extensibility.html#Extension) | Extensions that cannot be ignored<br/>Constraint (ext-1): Must have either extensions or value[x], not both<br/>Slicing: Description: Extensions are always sliced by (at least) url, Discriminator: url, Ordering: false, Rules: Open |
 |  - event | 0..* | Mandatory | [Coding](http://hl7.org/fhir/stu3/datatypes.html#coding) | [Code for the event this message represents - Binding (required): The type of Child Health Event.](https://fhir.nhs.uk/STU3/ValueSet/DCH-ChildHealthEventType-1) |
 |  - - system | 1..1 | Mandatory | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri) | Identity of the terminology system. MUST contain the Fixed Value: "https://fhir.nhs.uk/STU3/CodeSystem/DCH-ChildHealthEventType-1" |
@@ -100,7 +100,6 @@ The Child Health Event data items are fulfilled by elements within the FHIR reso
 |  - - reference | 1..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | Literal reference, Relative, internal or absolute URL |
 |  - - identifier | 0..1 | Not Used | [Identifier](http://hl7.org/fhir/stu3/datatypes.html#identifier) | Logical reference, when literal reference is not known |
 |  - - display | 0..1 | Not Used | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | Text alternative for the resource |
-
 
 
 
