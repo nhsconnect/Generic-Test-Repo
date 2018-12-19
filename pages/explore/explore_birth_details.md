@@ -96,7 +96,7 @@ The Child Health Event data items are fulfilled by elements within the FHIR reso
 |  - - identifier | 0..1 | Not Used | [Identifier](http://hl7.org/fhir/stu3/datatypes.html#identifier) | Logical reference, when literal reference is not known |
 |  - - display | 0..1 | Not Used | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | Text alternative for the resource |
 |  - focus | 1..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html) | The actual content of the message<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
-|   |  | Mandatory | CareConnect-NHSD-Encounter-1 | [The focus resource in the bundle. This MUST be to the encounter resource profiled as CareConnect-NHSD-Encounter-1](http://birth_details_used.html#mapping-for-encounter) |
+|   |  | Mandatory | CareConnect-NHSD-Encounter-1 | [The focus resource in the bundle. This MUST be to the encounter resource profiled as CareConnect-NHSD-Encounter-1](http://explore_birth_details_used.html#mapping-for-encounter) |
 |  - - reference | 1..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | Literal reference, Relative, internal or absolute URL |
 |  - - identifier | 0..1 | Not Used | [Identifier](http://hl7.org/fhir/stu3/datatypes.html#identifier) | Logical reference, when literal reference is not known |
 |  - - display | 0..1 | Not Used | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | Text alternative for the resource |
