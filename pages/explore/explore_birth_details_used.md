@@ -48,12 +48,13 @@ Bundle Resource Implementation
 
 |**[View All FHIR Elements](explore_birth_details.html#mapping-for-messageheader)**|    |**View Used FHIR Elements**|
 
+
 |  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for DCH Implementation** |
 |  ------ | :------ | ------ | :------ | :------ |
 |  MessageHeader | ​ |  |  | A resource that describes a message that is exchanged between systems<br/>Constraint (dom-2): If the resource is contained in another resource, it SHALL NOT contain nested Resources<br/>Constraint (dom-1): If the resource is contained in another resource, it SHALL NOT contain any narrative<br/>Constraint (dom-4): If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated<br/>Constraint (dom-3): If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource |
 |  - id | 1..1 | Mandatory | [Id](http://hl7.org/fhir/stu3/datatypes.html#id) | Logical id of this artifact. This MUST be a UUID. |
 |  - meta | 0..1 | Mandatory | [Meta](http://hl7.org/fhir/stu3/resource.html#Meta) | Metadata about the resource. The profile element MUST contain the value https://fhir.nhs.uk/STU3/StructureDefinition/NHSD-MessageHeader-1 |
-|  - extension (messageEventType) | 1..1 | Mandatory | https://fhir.nhs.uk/STU3/StructureDefinition/Extension-DCH-MessageEventType-1 | [The url attribute of the extension element MUST contain the value https://fhir.nhs.uk/STU3/StructureDefinition/Extension-DCH-MessageEventType-1 and populated as per specified here.](http://birth_details_used.html#extension-MessageUpdateType-1) |
+|  - extension (messageEventType) | 1..1 | Mandatory | [Extension-DCH-MessageEventType-1](https://fhir.nhs.uk/STU3/StructureDefinition/Extension-DCH-MessageEventType-1) | [The url attribute of the extension element MUST contain the value https://fhir.nhs.uk/STU3/StructureDefinition/Extension-DCH-MessageEventType-1 and populated as per specified here.](http://birth_details_used.html#extension-MessageUpdateType-1) |
 |  - event | 0..* | Mandatory | [Coding](http://hl7.org/fhir/stu3/datatypes.html#coding) | [Code for the event this message represents - Binding (required): The type of Child Health Event.](https://fhir.nhs.uk/STU3/ValueSet/DCH-ChildHealthEventType-1) |
 |  - - system | 1..1 | Mandatory | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri) | Identity of the terminology system. MUST contain the Fixed Value: "https://fhir.nhs.uk/STU3/CodeSystem/DCH-ChildHealthEventType-1" |
 |  - - code | 0..1 | Mandatory | [Code](http://hl7.org/fhir/stu3/datatypes.html#code) | [Symbol in syntax defined by the system. MUST contain a value from the ValueSet ( https://fhir.nhs.uk/STU3/ValueSet/DCH-ChildHealthEventType-1](https://fhir.nhs.uk/STU3/ValueSet/DCH-ChildHealthEventType-1 ) |
@@ -67,6 +68,19 @@ Bundle Resource Implementation
 |  - focus | 1..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html) | The actual content of the message<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
 |   |  | Mandatory | CareConnect-NHSD-Encounter-1 | [The focus resource in the bundle. This MUST be to the encounter resource profiled as CareConnect-NHSD-Encounter-1](http://birth_details_used.html#mapping-for-encounter) |
 |  - - reference | 1..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | Literal reference, Relative, internal or absolute URL |
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
