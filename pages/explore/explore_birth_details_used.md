@@ -71,6 +71,11 @@ Bundle Resource Implementation
 
 
 
+## Mapping for Encounter ##
+
+|>|Level 1|[Encounter Resource](http://hl7.org/fhir/stu3/encounter.html)|>|Level 2| [CareConnect-Encounter-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Encounter-1)|>|Level 3|[CareConnect-NHSD-Encounter-1 Profile](http://xxx)|
+
+|**View All FHIR Elements XXXXXXXXXXXXXXXXX**|    |**[View Used FHIR Elements Only](explore_birth_details_used.html#mapping-for-encounter)**|
 
 
 
