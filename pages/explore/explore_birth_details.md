@@ -59,6 +59,55 @@ The Child Health Event data items are fulfilled by elements within the FHIR reso
 |**View All FHIR Elements**|    |**[View Used FHIR Elements Only](explore_birth_details_used.html#mapping-for-messageheader)**|
 
 
+|  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for DCH Implementation** |
+|  ------ | :------ | ------ | :------ | :------ |
+|  MessageHeader | ​ |  |  | A resource that describes a message that is exchanged between systems<br/>Constraint (dom-2): If the resource is contained in another resource, it SHALL NOT contain nested Resources<br/>Constraint (dom-1): If the resource is contained in another resource, it SHALL NOT contain any narrative<br/>Constraint (dom-4): If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated<br/>Constraint (dom-3): If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource |
+|  - id | 1..1 | Mandatory | [Id](http://hl7.org/fhir/stu3/datatypes.html#id) | Logical id of this artifact. This MUST be a UUID. |
+|  - meta | 0..1 | Mandatory | [Meta](http://hl7.org/fhir/stu3/resource.html#Meta) | Metadata about the resource. The profile element MUST contain the value https://fhir.nhs.uk/STU3/StructureDefinition/NHSD-MessageHeader-1 |
+|  - implicitRules | 0..1 | Not Used | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri) | A set of rules under which this content was created |
+|  - language | 0..1 | Not Used | [Code](http://hl7.org/fhir/stu3/datatypes.html#code) | [Language of the resource content Binding (extensible): A human language. ( http://hl7.org/fhir/stu3/valueset-languages.html )](http://hl7.org/fhir/stu3/valueset-languages.html) |
+|  - text | 0..1 | Not Used | [Narrative](http://hl7.org/fhir/stu3/narrative.html#Narrative) | Text summary of the resource, for human interpretation |
+|  - contained | 0..* | Not Used | [Resource](http://hl7.org/fhir/stu3/resource.html) | Contained, inline Resources |
+|  - extension (messageEventType) | 1..1 | Mandatory | https://fhir.nhs.uk/STU3/StructureDefinition/Extension-DCH-MessageEventType-1 | [The url attribute of the extension element MUST contain the value https://fhir.nhs.uk/STU3/StructureDefinition/Extension-DCH-MessageEventType-1 and populated as per specified here.](http://birth_details_used.html#extension-MessageUpdateType-1) |
+|  - modifierExtension | 0..* | Not Used | [Extension](http://hl7.org/fhir/stu3/extensibility.html#Extension) | Extensions that cannot be ignored<br/>Constraint (ext-1): Must have either extensions or value[x], not both<br/>Slicing: Description: Extensions are always sliced by (at least) url, Discriminator: url, Ordering: false, Rules: Open |
+|  - event | 0..* | Mandatory | [Coding](http://hl7.org/fhir/stu3/datatypes.html#coding) | [Code for the event this message represents - Binding (required): The type of Child Health Event.](https://fhir.nhs.uk/STU3/ValueSet/DCH-ChildHealthEventType-1) |
+|  - - system | 1..1 | Mandatory | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri) | Identity of the terminology system. MUST contain the Fixed Value: "https://fhir.nhs.uk/STU3/CodeSystem/DCH-ChildHealthEventType-1" |
+|  - - version | 1..1 | Not Used | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | Version of the system - if relevant |
+|  - - code | 0..1 | Mandatory | [Code](http://hl7.org/fhir/stu3/datatypes.html#code) | [Symbol in syntax defined by the system. MUST contain a value from the ValueSet ( https://fhir.nhs.uk/STU3/ValueSet/DCH-ChildHealthEventType-1](https://fhir.nhs.uk/STU3/ValueSet/DCH-ChildHealthEventType-1 ) |
+|  - - display | 1..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | Representation defined by the system. MUST contain the display text assoicated  with the code carried in the code element |
+|  - timestamp | 1..1 | Mandatory | [Instant](http://hl7.org/fhir/stu3/datatypes.html#instant) | Time that the message was sent |
+|  - source | 1..1 | Mandatory | [BackboneElement](http://hl7.org/fhir/stu3/backboneelement.html) | Message source application |
+|  - - modifierExtension | 1..1 | Not Used | [Extension](http://hl7.org/fhir/stu3/extensibility.html#Extension) | Extensions that cannot be ignored<br/>Constraint (ext-1): Must have either extensions or value[x], not both |
+|  - - name | 0..* | Not Used | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | Name of system |
+|  - - software | 0..1 | Not Used | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | Name of software running the system |
+|  - - version | 0..1 | Not Used | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | Version of software running |
+|  - - contact | 0..1 | Not Used | [ContactPoint](http://hl7.org/fhir/stu3/datatypes.html#contactpoint) | Human contact for problems<br/>Constraint (cpt-2): A system is required if a value is provided. |
+|  - - - system | 0..1 | Not Used | [Code](http://hl7.org/fhir/stu3/datatypes.html#code) | [phone : fax : email : pager : url : sms : other. Binding (required): Telecommunications form for contact point ( http://hl7.org/fhir/stu3/valueset-contact-point-system.html )](http://hl7.org/fhir/stu3/valueset-contact-point-system.html) |
+|  - - - value | 0..1 | Not Used | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | The actual contact point details |
+|  - - - use | 0..1 | Not Used | [Code](http://hl7.org/fhir/stu3/datatypes.html#code) | [home : work : temp : old : mobile - purpose of this contact point. Binding (required): Use of contact point ( http://hl7.org/fhir/stu3/valueset-contact-point-use.html )](http://hl7.org/fhir/stu3/valueset-contact-point-use.html) |
+|  - - - rank | 0..1 | Not Used | [positiveInt](http://hl7.org/fhir/stu3/datatypes.html#positiveint) | Specify preferred order of use (1 = highest) |
+|  - - - period | 0..1 | Not Used | [Period](http://hl7.org/fhir/stu3/datatypes.html#period) | Time period when the contact point was/is in use<br/>Constraint (per-1): If present, start SHALL have a lower value than end |
+|  - - - - start | 0..1 | Not Used | [dateTime](http://hl7.org/fhir/stu3/datatypes.html#datetime) | Starting time with inclusive boundary |
+|  - - - - end | 0..1 | Not Used | [dateTime](http://hl7.org/fhir/stu3/datatypes.html#datetime) | End time with inclusive boundary, if not ongoing |
+|  - - endpoint | 1..1 | Mandatory | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri) | Actual message source address or id |
+|  - responsible | 1..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html) | Final responsibility for event<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
+|   |  | Mandatory | CareConnect-NHSD-Organization-1 | [The responsible organization carried in the Organizaion resource in the bundle. This MUST be to the Organization resource profiled as CareConnect-NHSD-Organization-1](birth_details_used.html#mapping-for-organization) |
+|  - - reference | 1..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | Literal reference, Relative, internal or absolute URL |
+|  - - identifier | 0..1 | Not Used | [Identifier](http://hl7.org/fhir/stu3/datatypes.html#identifier) | Logical reference, when literal reference is not known |
+|  - - display | 0..1 | Not Used | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | Text alternative for the resource |
+|  - focus | 1..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html) | The actual content of the message<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
+|   |  | Mandatory | CareConnect-NHSD-Encounter-1 | [The focus resource in the bundle. This MUST be to the encounter resource profiled as CareConnect-NHSD-Encounter-1](http://birth_details_used.html#mapping-for-encounter) |
+|  - - reference | 1..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | Literal reference, Relative, internal or absolute URL |
+|  - - identifier | 0..1 | Not Used | [Identifier](http://hl7.org/fhir/stu3/datatypes.html#identifier) | Logical reference, when literal reference is not known |
+|  - - display | 0..1 | Not Used | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | Text alternative for the resource |
+
+
+
+
+
+
+
+
 | DCH Data Item                       | FHIR resource element                                                   | Mandatory/Required/Optional |
 |-------------------------------------|-------------------------------------------------------------------------|-----------------------------|
 | Location of Birth                   | CareConnect-DCH-Delivery-Location-1.identifier (ODS Site Code)           | Required                   |
