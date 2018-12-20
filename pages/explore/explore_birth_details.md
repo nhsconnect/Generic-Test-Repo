@@ -108,7 +108,111 @@ The Child Health Event data items are fulfilled by elements within the FHIR reso
 
 |**View All FHIR Elements**|    |**[View Used FHIR Elements Only](explore_birth_details_used.html#mapping-for-encounter)**|
 
-
+|  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for XXX Implementation** |
+|  ------ | ------ | ------ | ------ | ------ |
+|  Encounter | ​ |  |  | **An interaction during which services are provided to the patient<br/>Constraint (dom-2): If the resource is contained in another resource, it SHALL NOT contain nested Resources<br/>Constraint (dom-1): If the resource is contained in another resource, it SHALL NOT contain any narrative<br/>Constraint (dom-4): If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated<br/>Constraint (dom-3): If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource** |
+|  id | 0..1 | **Select** | [Id](http://hl7.org/fhir/stu3/datatypes.html#id) | **Logical id of this artifact** |
+|  meta | 0..1 | **Select** | [Meta](http://hl7.org/fhir/stu3/resource.html#Meta) | **Metadata about the resource** |
+|  implicitRules | 0..1 | **Select** | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri) | **A set of rules under which this content was created** |
+|  language | 0..1 | **Select** | [Code](http://hl7.org/fhir/stu3/datatypes.html#code) | **Language of the resource content<br/>Binding (extensible): A human language. ( http://hl7.org/fhir/stu3/valueset-languages.html )** |
+|  text | 0..1 | **Select** | [Narrative](http://hl7.org/fhir/stu3/narrative.html#Narrative) | **Text summary of the resource, for human interpretation** |
+|  contained | 0..* | **Select** | [Resource](http://hl7.org/fhir/stu3/resource.html) | **Contained, inline Resources** |
+|  modifierExtension | 0..* | **Select** | [Extension](http://hl7.org/fhir/stu3/extensibility.html#Extension) | **Extensions that cannot be ignored<br/>Constraint (ext-1): Must have either extensions or value[x], not both<br/>Slicing: Description: Extensions are always sliced by (at least) url, Discriminator: url, Ordering: false, Rules: Open** |
+|  identifier | 0..1 | **Select** | [Identifier](http://hl7.org/fhir/stu3/datatypes.html#identifier) | **Identifier(s) by which this encounter is known** |
+|  system | 1..1 | **Select** | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri) | **The namespace for the identifier value** |
+|  value | 1..1 | **Select** | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | **The value that is unique** |
+|  status | 1..1 | **Select** | [Code](http://hl7.org/fhir/stu3/datatypes.html#code) | **planned <code>&amp;#124;</code> arrived <code>&amp;#124;</code> triaged <code>&amp;#124;</code> in-progress <code>&amp;#124;</code> onleave <code>&amp;#124;</code> finished <code>&amp;#124;</code> cancelled +<br/>Fixed Value: finished<br/>Binding (required): Current state of the encounter ( http://hl7.org/fhir/stu3/valueset-encounter-status.html)** |
+|  type | 0..* | **Select** | [CodeableConcept](http://hl7.org/fhir/stu3/datatypes.html#codeableconcept) | **Specific type of encounter<br/>Binding (example): The type of encounter ( http://hl7.org/fhir/stu3/valueset-encounter-type.html )** |
+|  coding | 0..* | **Select** | [Coding](http://hl7.org/fhir/stu3/datatypes.html#coding) | **Code defined by a terminology system<br/>Slicing: Discriminator: system, Ordering: false, Rules: Open** |
+|  coding (snomedCT) | 0..1 | **Select** | [Coding](http://hl7.org/fhir/stu3/datatypes.html#coding) | **Code defined by a terminology system<br/>Binding (required): A code from the SNOMED Clinical Terminology UK coding system that describes an encounter between a care professional and the patient (or patient's record). (https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-EncounterType-1 )** |
+|  extension (snomedCTDescriptionID) | 0..* | **Select** | [Extension](http://hl7.org/fhir/stu3/extensibility.html#Extension) | **Additional Content defined by implementations<br/>Constraint (ext-1): Must have either extensions or value[x], not both<br/>URL: https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid** |
+|  url | 1..1 | **Select** | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri) | **Identifies The Meaning Of The Extension<br/>Fixed Value: https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid** |
+|  value[x] | 0..1 | **Select** | [*](http://hl7.org/fhir/stu3/datatypes.html#open) | **Value of extension** |
+|  system | 1..1 | **Select** | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri) | **Identity of the terminology system<br/>Fixed Value: http://snomed.info/sct** |
+|  code | 1..1 | **Select** | [Code](http://hl7.org/fhir/stu3/datatypes.html#code) | **Symbol in syntax defined by the system** |
+|  display | 1..1 | **Select** | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | **Representation defined by the system** |
+|  userSelected | 0..1 | **Select** | [Boolean](http://hl7.org/fhir/stu3/datatypes.html#boolean) | **If this coding was chosen directly by the user** |
+|  coding (childHealthEncounterType) | 1..1 | **Select** | [Coding](http://hl7.org/fhir/stu3/datatypes.html#coding) | **Code defined by a terminology system<br/>Binding (required): The type of Child Health encounter ( https://fhir.nhs.uk/STU3/ValueSet/DCH-ChildHealthEncounterType-1 )** |
+|  system | 1..1 | **Select** | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri) | **Identity of the terminology system<br/>Fixed Value: https://fhir.nhs.uk/STU3/CodeSystem/DCH-ChildHealthEncounterType-1** |
+|  code | 0..1 | **Select** | [Code](http://hl7.org/fhir/stu3/datatypes.html#code) | **Symbol in syntax defined by the system** |
+|  display | 1..1 | **Select** | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | **Representation defined by the system** |
+|  text | 0..1 | **Select** | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | **Plain text representation of the concept** |
+|  subject | 1..1 | **Select** | [Reference ( CareConnect-DCH-Patient-1 )](https://fhir-test.nhs.uk/STU3/StructureDefinition/CareConnect-DCH-Patient-1) | **The patient present at the encounter<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided** |
+|  reference | 1..1 | **Select** | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | **Literal reference, Relative, internal or absolute URL** |
+|  identifier | 0..1 | **Select** | [Identifier](http://hl7.org/fhir/stu3/datatypes.html#identifier) | **Logical reference, when literal reference is not known** |
+|  display | 0..1 | **Select** | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | **Text alternative for the resource** |
+|  participant | 0..* | **Select** | [BackboneElement](http://hl7.org/fhir/stu3/backboneelement.html) | **List of participants involved in the encounter** |
+|  modifierExtension | 0..* | **Select** | [Extension](http://hl7.org/fhir/stu3/extensibility.html#Extension) | **Extensions that cannot be ignored<br/>Constraint (ext-1): Must have either extensions or value[x], not both** |
+|  type | 0..* | **Select** | [CodeableConcept](http://hl7.org/fhir/stu3/datatypes.html#codeableconcept) | **Role of participant in encounter<br/>Binding (extensible): Role of participant in encounter ( http://hl7.org/fhir/stu3/valueset-encounter-participant-type.html )** |
+|  coding | 0..* | **Select** | [Coding](http://hl7.org/fhir/stu3/datatypes.html#coding) | **Code defined by a terminology system** |
+|  system | 0..1 | **Select** | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri) | **Identity of the terminology system** |
+|  version | 0..1 | **Select** | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | **Version of the system - if relevant** |
+|  code | 0..1 | **Select** | [Code](http://hl7.org/fhir/stu3/datatypes.html#code) | **Symbol in syntax defined by the system** |
+|  display | 0..1 | **Select** | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | **Representation defined by the system** |
+|  userSelected | 0..1 | **Select** | [Boolean](http://hl7.org/fhir/stu3/datatypes.html#boolean) | **If this coding was chosen directly by the user** |
+|  text | 0..1 | **Select** | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | **Plain text representation of the concept** |
+|  period | 0..1 | **Select** | [Period](http://hl7.org/fhir/stu3/datatypes.html#period) | **Period of time during the encounter that the participant participated<br/>Constraint (per-1): If present, start SHALL have a lower value than end** |
+|  start | 0..1 | **Select** | [dateTime](http://hl7.org/fhir/stu3/datatypes.html#datetime) | **Starting time with inclusive boundary** |
+|  end | 0..1 | **Select** | [dateTime](http://hl7.org/fhir/stu3/datatypes.html#datetime) | **End time with inclusive boundary, if not ongoing** |
+|  individual | 0..1 | **Select** | [Reference ( CareConnect-DCH-Practitioner-1 <code>&amp;#124;</code> DCH-RelatedPerson-1 )](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-DCH-Encounter-1) | **Persons involved in the encounter other than the patient<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided** |
+|  reference | 0..1 | **Select** | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | **Literal reference, Relative, internal or absolute URL** |
+|  identifier | 0..1 | **Select** | [Identifier](http://hl7.org/fhir/stu3/datatypes.html#identifier) | **Logical reference, when literal reference is not known** |
+|  display | 0..1 | **Select** | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | **Text alternative for the resource** |
+|  period | 1..1 | **Select** | [Period](http://hl7.org/fhir/stu3/datatypes.html#period) | **The start and end time of the encounter<br/>Constraint (per-1): If present, start SHALL have a lower value than end** |
+|  start | 1..1 | **Select** | [dateTime](http://hl7.org/fhir/stu3/datatypes.html#datetime) | **Starting time with inclusive boundary** |
+|  end | 0..1 | **Select** | [dateTime](http://hl7.org/fhir/stu3/datatypes.html#datetime) | **End time with inclusive boundary, if not ongoing** |
+|  reason | 0..1 | **Select** | [CodeableConcept](http://hl7.org/fhir/stu3/datatypes.html#codeableconcept) | **Reason the encounter takes place (code)<br/>Binding (preferred): Reason why the encounter takes place. ( http://hl7.org/fhir/stu3/valueset-encounter-reason.html )** |
+|  coding (snomedCT) | 0..* | **Select** | [Coding](http://hl7.org/fhir/stu3/datatypes.html#coding) | **Code defined by a terminology system** |
+|  extension (snomedCTDescriptionID) | 0..* | **Select** | [Extension](http://hl7.org/fhir/stu3/extensibility.html#Extension) | **Additional Content defined by implementations<br/>Constraint (ext-1): Must have either extensions or value[x], not both<br/>URL: https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid** |
+|  url | 1..1 | **Select** | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri) | **Identifies The Meaning Of The Extension<br/>Fixed Value: https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid** |
+|  value[x] | 0..1 | **Select** | [*](http://hl7.org/fhir/stu3/datatypes.html#open) | **Value of extension** |
+|  system | 1..1 | **Select** | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri) | **Identity of the terminology system<br/>Fixed Value: http://snomed.info/sct** |
+|  code | 1..1 | **Select** | Code | **Symbol in syntax defined by the system** |
+|  display | 1..1 | **Select** | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | **Representation defined by the system** |
+|  userSelected | 0..1 | **Select** | [Boolean](http://hl7.org/fhir/stu3/datatypes.html#boolean) | **If this coding was chosen directly by the user** |
+|  text | 0..1 | **Select** | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | **Plain text representation of the concept** |
+|  hospitalization | 0..1 | **Select** | [BackboneElement](http://hl7.org/fhir/stu3/backboneelement.html) | **Details about the admission to a healthcare service** |
+|  extension (admissionMethod) | 0..* | **Select** | [Extension](http://hl7.org/fhir/stu3/extensibility.html#Extension) | **Additional Content defined by implementations<br/>Constraint (ext-1): Must have either extensions or value[x], not both<br/>URL: https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-AdmissionMethod-1** |
+|  url | 1..1 | **Select** | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri) | **Identifies The Meaning Of The Extension<br/>Fixed Value: https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-AdmissionMethod-1** |
+|  value[x] | 0..1 | **Select** | [*](http://hl7.org/fhir/stu3/datatypes.html#open) | **Value of extension** |
+|  extension (dischargeMethod) | 0..* | **Select** | [Extension](http://hl7.org/fhir/stu3/extensibility.html#Extension) | **Additional Content defined by implementations<br/>Constraint (ext-1): Must have either extensions or value[x], not both<br/>URL: https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-DischargeMethod-1** |
+|  url | 1..1 | **Select** | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri) | **Identifies The Meaning Of The Extension<br/>Fixed Value: https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-DischargeMethod-1** |
+|  value[x] | 0..1 | **Select** | [*](http://hl7.org/fhir/stu3/datatypes.html#open) | **Value of extension** |
+|  modifierExtension | 0..* | **Select** | [Extension](http://hl7.org/fhir/stu3/extensibility.html#Extension) | **Extensions that cannot be ignored<br/>Constraint (ext-1): Must have either extensions or value[x], not both** |
+|  admitSource | 0..1 | **Select** | [CodeableConcept](http://hl7.org/fhir/stu3/datatypes.html#codeableconcept) | **From where patient was admitted (physician referral, transfer)<br/>Binding (required): The source of admission to a Hospital Provider Spell or a Nursing Episode when the Patient is in a Hospital Site or a Care Home. (https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-SourceOfAdmission-1 )** |
+|  coding | 0..* | **Select** | [Coding](http://hl7.org/fhir/stu3/datatypes.html#coding) | **Code defined by a terminology system** |
+|  system | 0..1 | **Select** | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri) | **Identity of the terminology system<br/>Fixed Value: https://fhir.hl7.org.uk/STU3/CodeSystem/CareConnect-SourceOfAdmission-1** |
+|  version | 0..1 | **Select** | String | **Version of the system - if relevant** |
+|  code | 0..1 | **Select** | [Code](http://hl7.org/fhir/stu3/datatypes.html#code) | **Symbol in syntax defined by the system** |
+|  display | 0..1 | **Select** | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | **Representation defined by the system** |
+|  userSelected | 0..1 | **Select** | [Boolean](http://hl7.org/fhir/stu3/datatypes.html#boolean) | **If this coding was chosen directly by the user** |
+|  text | 0..1 | **Select** | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | **Plain text representation of the concept** |
+|  destination | 0..1 | **Select** | [Reference ( CareConnect-Location-1 )](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-Location-1) | **Location to which the patient is discharged<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided** |
+|  reference | 0..1 | **Select** | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | **Literal reference, Relative, internal or absolute URL** |
+|  identifier | 0..1 | **Select** | [Identifier](http://hl7.org/fhir/stu3/datatypes.html#identifier) | **Logical reference, when literal reference is not known** |
+|  display | 0..1 | **Select** | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | **Text alternative for the resource** |
+|  dischargeDisposition | 0..1 | **Select** | [CodeableConcept](http://hl7.org/fhir/stu3/datatypes.html#codeableconcept) | **Category or kind of location after discharge<br/>Binding (required): The destination of a Patient on completion of a Hospital Provider Spell, or a note that the Patient died or was a still birth. ( https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-DischargeDestination-1 )** |
+|  coding | 0..* | **Select** | [Coding](http://hl7.org/fhir/stu3/datatypes.html#coding) | **Code defined by a terminology system** |
+|  system | 0..1 | **Select** | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri) | **Identity of the terminology system<br/>Fixed Value: https://fhir.hl7.org.uk/STU3/CodeSystem/CareConnect-DischargeDestination-1** |
+|  version | 0..1 | **Select** | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | **Version of the system - if relevant** |
+|  code | 0..1 | **Select** | [Code](http://hl7.org/fhir/stu3/datatypes.html#code) | **Symbol in syntax defined by the system** |
+|  display | 0..1 | **Select** | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | **Representation defined by the system** |
+|  userSelected | 0..1 | **Select** | [Boolean](http://hl7.org/fhir/stu3/datatypes.html#boolean) | **If this coding was chosen directly by the user** |
+|  text | 0..1 | **Select** | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | **Plain text representation of the concept** |
+|  location | 1..1 | **Select** | [BackboneElement](http://hl7.org/fhir/stu3/backboneelement.html) | **List of locations where the patient has been** |
+|  modifierExtension | 0..* | **Select** | [Extension](http://hl7.org/fhir/stu3/extensibility.html#Extension) | **Extensions that cannot be ignored<br/>Constraint (ext-1): Must have either extensions or value[x], not both** |
+|  location | 1..1 | **Select** | [Reference ( CareConnect-Location-1 <code>&amp;#124;</code> CareConnect-DCH-Delivery-Location-1 )](https://fhir-test.nhs.uk/STU3/StructureDefinition/CareConnect-DCH-Delivery-Location-1) | **Location the encounter takes place<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided** |
+|  reference | 1..1 | **Select** | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | **Literal reference, Relative, internal or absolute URL** |
+|  identifier | 0..1 | **Select** | [Identifier](http://hl7.org/fhir/stu3/datatypes.html#identifier) | **Logical reference, when literal reference is not known** |
+|  display | 0..1 | **Select** | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | **Text alternative for the resource** |
+|  status | 0..1 | **Select** | [Code](http://hl7.org/fhir/stu3/datatypes.html#code) | **planned <code>&amp;#124;</code> active <code>&amp;#124;</code> reserved <code>&amp;#124;</code> completed<br/>Binding (required): The status of the location. ( http://hl7.org/fhir/stu3/valueset-encounter-location-status.html )** |
+|  period | 0..1 | **Select** | [Period](http://hl7.org/fhir/stu3/datatypes.html#period) | **Time period during which the patient was present at the location<br/>Constraint (per-1): If present, start SHALL have a lower value than end** |
+|  start | 0..1 | **Select** | [dateTime](http://hl7.org/fhir/stu3/datatypes.html#datetime) | **Starting time with inclusive boundary** |
+|  end | 0..1 | **Select** | [dateTime](http://hl7.org/fhir/stu3/datatypes.html#datetime) | **End time with inclusive boundary, if not ongoing** |
+|  serviceProvider | 1..1 | **Select** | [Reference ( CareConnect-Organization-1 )](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-EMS-Patient-1) | **The custodian organization of this Encounter record<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided** |
+|  reference | 1..1 | **Select** | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | **Literal reference, Relative, internal or absolute URL** |
+|  identifier | 0..1 | **Select** | [Identifier](http://hl7.org/fhir/stu3/datatypes.html#identifier) | **Logical reference, when literal reference is not known** |
+|  display | 0..1 | **Select** | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | **Text alternative for the resource** |
 
 
 | DCH Data Item                       | FHIR resource element                                                   | Mandatory/Required/Optional |
