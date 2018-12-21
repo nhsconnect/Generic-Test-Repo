@@ -29,7 +29,7 @@ The Child Health Event data items are fulfilled by elements within the FHIR reso
 
 |>|Level 1|[Bundle Resource](http://hl7.org/fhir/stu3/bundle.html)|>|Level 2| None|>|Level 3|[NHSD-Bundle-1 Profile](http://xxx)|
 
-|**View All FHIR Elements**| |**[View Used Elements Only](explore_birth_details.html#mapping-for-bundle)**|   
+|**View All FHIR Elements**|    |**[View Used Elements Only](explore_birth_details.html#mapping-for-bundle)**|   
 
 |  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for DCH Implementation** |
 |  :------ | :------ | ------ | :------ | :------ |
@@ -56,7 +56,7 @@ The Child Health Event data items are fulfilled by elements within the FHIR reso
 
 |>|Level 1|[MessageHeader Resource](http://hl7.org/fhir/stu3/messageHeader.html)|>|Level 2| None|>|Level 3|[NHSD-MessageHeader-1 Profile](http://xxx)|
 
-|**View All FHIR Elements**| |**[View Used Elements Only](explore_birth_details.html#mapping-for-messageheader)**|   
+|**View All FHIR Elements**|    |**[View Used Elements Only](explore_birth_details.html#mapping-for-messageheader)**|   
 
 
 |  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for DCH Implementation** |
@@ -106,7 +106,7 @@ The Child Health Event data items are fulfilled by elements within the FHIR reso
 
 |>|Level 1|[Encounter Resource](http://hl7.org/fhir/stu3/encounter.html)|>|Level 2| [CareConnect-Encounter-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Encounter-1)|>|Level 3|[CareConnect-NHSD-Encounter-1 Profile](http://xxx)|
 
-|**View All FHIR Elements**| |**[View Used Elements Only](explore_birth_details.html#mapping-for-encounter)**|   
+|**View All FHIR Elements**|    |**[View Used Elements Only](explore_birth_details.html#mapping-for-encounter)**|   
 
 |  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for XXX Implementation** |
 |  ------ | ------ | ------ | ------ | ------ |
