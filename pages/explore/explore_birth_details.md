@@ -80,7 +80,6 @@ Bundle Resource Implementation
 |  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for DCH Implementation** |
 |  ------ | ------ | ------ | ------ | ------ |
 |  Encounter | ​ |  |  | **An interaction during which services are provided to the patient<br/>Constraint (dom-2): If the resource is contained in another resource, it SHALL NOT contain nested Resources<br/>Constraint (dom-1): If the resource is contained in another resource, it SHALL NOT contain any narrative<br/>Constraint (dom-4): If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated<br/>Constraint (dom-3): If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource** |
-|  - id | 0..1 | **Select** | [Id](http://hl7.org/fhir/stu3/datatypes.html#id) | **Logical id of this artifact** |
 |  - meta | 0..1 | **Mandatory** | [Meta](http://hl7.org/fhir/stu3/resource.html#Meta) | The profile element MUST contain the value https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-NHSD-Encounter-1 |
 |  - identifier | 0..1 | **Mandatory** | [Identifier](http://hl7.org/fhir/stu3/datatypes.html#identifier) | **Identifier(s) by which this encounter is known.** |
 |  - - system | 1..1 | **Mandatory** | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri) | **The namespace for the identifier value** |
