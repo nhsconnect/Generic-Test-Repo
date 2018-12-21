@@ -3,7 +3,7 @@ title: Birth Details Event Message Bundle
 keywords:  messaging, bundles
 tags: [fhir,messaging]
 sidebar: foundations_sidebar
-permalink: explore_birth_details_used.html
+permalink: explore_birth_details.html
 summary: "The FHIR profiles used for the Birth Details Event Message Bundle"
 ---
 
