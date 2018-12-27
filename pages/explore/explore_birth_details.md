@@ -93,6 +93,14 @@ Bundle Resource Implementation
 |  - subject | 1..1 | **Mandatory** | [Reference](http://hl7.org/fhir/stu3/references.html) | The patient present at the encounter<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided. |
 |   |  | **Mandatory** | [CareConnect-NHSD-Patient-1](http://xxx) | [A patient resource in the bundle.<b><font color='red'>This MUST be to the Patient resource profiled as CareConnect-NHSD-Patient-1</font></b>](explore_birth_details.html#mapping-for-patient) |
 |  - - reference | 1..1 | **Mandatory** | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | Literal reference, Relative, internal or absolute URL <b><font color='red'>a reference to the patient resource instance in the message in the format of  a UUID prefixed with 'urn:uuid:'.</font></b> |
+|  - - display | 0..1 | **Mandatory** | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | **Text alternative for the resource** |
+|   | 0.1 | **Mandatory** | CareConnect-NHSD-Location |  |
+|  - - - reference | 0..1 | **Mandatory** | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | **Literal reference, Relative, internal or absolute URL** |
+|  - - - display | 0..1 | **Mandatory** | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | **Text alternative for the resource** |
+|  - - serviceProvider | 1..1 | **Mandatory** | [Reference](http://hl7.org/fhir/stu3/references.html) | **The custodian organization of this Encounter record<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided** |
+|   |  | **Mandatory** | [CareConnect-NHSD-Organization-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-NHSD-Organization-1) | [An organization resource in the bundle.<b><font color='red'>This MUST be to the Organization resource profiled as CareConnect-NHSD-Organization-1</font></b>](explore_birth_details.html#mapping-for-organization) |
+|  - - - reference | 1..1 | **Mandatory** | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | **Literal reference, Relative, internal or absolute URL** |
+|  - - - display | 0..1 | **Mandatory** | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | **Text alternative for the resource** |
 
 
 
