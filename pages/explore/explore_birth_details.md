@@ -41,7 +41,7 @@ Bundle Resource Implementation
 |  - type | 1..1 | Mandatory | [Code](http://hl7.org/fhir/stu3/datatypes.html#code) | document : message : transaction : transaction-response : batch : batch-response : history : searchset : collection<br/>Binding (required): Indicates the purpose of a bundle - how it was intended to be used. [See FHIR STU3 for further info](http://hl7.org/fhir/stu3/valueset-bundle-type.html)<br/><font color='red'>The value attribute of the code element MUST contain the fixed value: 'message'.</font> |
 |  - entry | 1..* | Mandatory | [BackboneElement](http://hl7.org/fhir/stu3/backboneelement.html) | Entry in the bundle - will have a resource, or information<br/>Constraint (bdl-8): fullUrl cannot be a version specific reference<br/>Constraint (bdl-5): Must Be A Resource Unless There'S A Request Or Response |
 |  - - fullUrl | 0..1 | Mandatory | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri) | Absolute URL for resource (server address, or UUID/OID). <font color='red'>This MUST be a UUID prefixed by urn:uuid </font>: |
-|  - - resource | 1..1 | Mandatory | [Resource](http://hl7.org/fhir/stu3/resource.html) | A resource in the bundle. <font color='red'>This MUST be to the MessageHeader resource profiled as NHSD-MessageHeader-1.</font> See [Mapping for MessageHeader](birth_details_used.html#mapping-for-messageheader) for further info. |
+|  - - resource | 1..1 | Mandatory | [Resource](http://hl7.org/fhir/stu3/resource.html) | A resource in the bundle. <font color='red'>This MUST be to the MessageHeader resource profiled as NHSD-MessageHeader-1.</font> See [Mapping for MessageHeader](birth_details.html#mapping-for-messageheader) for further info. |
 
 ## Mapping for MessageHeader ##
 
