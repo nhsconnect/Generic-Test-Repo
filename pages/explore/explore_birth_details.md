@@ -61,12 +61,12 @@ Bundle Resource Implementation
 |  - - display | 1..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | <font color='red'>MUST contain the value 'Birth Details'</font> |
 |  - timestamp | 1..1 | Mandatory | [Instant](http://hl7.org/fhir/stu3/datatypes.html#instant) | Time that the message was sent |
 |  - source | 1..1 | Mandatory | [BackboneElement](http://hl7.org/fhir/stu3/backboneelement.html) | Message source application identified using an ASID |
-|  - - endpoint | 1..1 | Mandatory | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri) | Actual message source address or id  <font color-'red'>Must contain the ASID of the sending system prefixed by urn:nhs:addressing:asid:for example urn:nhs:addressing:asid:477121000325.</font> |
+|  - - endpoint | 1..1 | Mandatory | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri) | Actual message source address or id  <font color='red'>Must contain the ASID of the sending system prefixed by urn:nhs:addressing:asid:for example urn:nhs:addressing:asid:477121000325.</font> |
 |  - responsible | 1..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html) | Final responsibility for event<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
 |   |  | Mandatory | CareConnect-NHSD-Organization-1 | The responsible organization carried in the Organizaion resource in the bundle. <font color='red'>This MUST be to the Organization resource profiled as CareConnect-NHSD-Organization-1"</font> See [mapping for Organization](explore_birth_details.html#mapping-for-organization) for further info. |
 |  - - reference | 1..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | Literal reference, Relative, internal or absolute URL<font color='red'>MUST contain a UUID prefixed by urn:uuid:</font> |
 |  - focus | 1..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html) | The actual content of the message<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
-|   |  | Mandatory | CareConnect-NHSD-Encounter-1 | The focus resource in the bundle.<font color='red'> This MUST be to the encounter resource profiled as CareConnect-NHSD-Encounter-1</font>[See mapping for encounter for further info](explore_birth_details.html#mapping-for-messageheader) |
+|   |  | Mandatory | CareConnect-NHSD-Encounter-1 | The focus resource in the bundle.<font color='red'> This MUST be to the encounter resource profiled as CareConnect-NHSD-Encounter-1. </font>[See mapping for encounter for further info](explore_birth_details.html#mapping-for-encounter) |
 |  - - reference | 1..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | Literal reference, Relative, internal or absolute URL.<font color='red'>MUST contain a UUID prefixed by urn:uuid:</font> |
 
 
