@@ -107,31 +107,32 @@ Bundle Resource Implementation
 |**View Used FHIR Elements**|    |**[View All FHIR Elements](explore_birth_details_all.html#mapping-for-patient)**|
 
 |   |  |  |  |  |
-|  ------ | ------ | ------ | ------ | ------ |
+| --- | --- | --- | --- | --- |
 |  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for XXX Implementation** |
-|  Patient | ​ |  |  | Information about an individual or animal receiving health care services<br/>Constraint (dom-2): If the resource is contained in another resource, it SHALL NOT contain nested Resources<br/>Constraint (dom-1): If the resource is contained in another resource, it SHALL NOT contain any narrative<br/>Constraint (dom-4): If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated<br/>Constraint (dom-3): If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource |
-|  - meta | 0..1 | **Mandatory** | [Meta](http://hl7.org/fhir/stu3/resource.html#Meta) | Metadata about the resource |
-|  - identifier | 0..* | **Mandatory** | [Identifier](http://hl7.org/fhir/stu3/datatypes.html#identifier) | An identifier for this patient<br/>Slicing: Discriminator: system, Ordering: false, Rules: Open at End |
-|  - - identifier (nhsNumber) | 0..1 | **Mandatory** | [Identifier](http://hl7.org/fhir/stu3/datatypes.html#identifier) | The patient's NHS number |
-|  - - extension (nhsNumberVerificationStatus) | 1..1 | **Mandatory** | [Extension](http://hl7.org/fhir/stu3/extensibility.html#Extension) | NHS number verification status<br/>Constraint (ext-1): Must have either extensions or value[x], not both<br/>URL: https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-NHSNumberVerificationStatus-1 |
-|  - - system | 1..1 | **Mandatory** | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri) | The namespace for the identifier value<br/>Fixed Value: https://fhir.nhs.uk/Id/nhs-number |
-|  - - value | 1..1 | **Mandatory** | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | The value that is unique |
-|  - name | 1..* | **Mandatory** | [HumanName](http://hl7.org/fhir/stu3/datatypes.html#humanname) | A name associated with the patient<br/>Slicing: Discriminator: use, Ordering: false, Rules: Open at End |
-|  - name (official) | 1..1 | **Mandatory** | [HumanName](http://hl7.org/fhir/stu3/datatypes.html#humanname) | A name associated with the patient |
-|  - - use | 1..1 | **Mandatory** | [Code](http://hl7.org/fhir/stu3/datatypes.html#code) | usual <code>&amp;#124;</code> official <code>&amp;#124;</code> temp <code>&amp;#124;</code> nickname <code>&amp;#124;</code> anonymous <code>&amp;#124;</code> old <code>&amp;#124;</code> maiden<br/>Fixed Value: official<br/>Binding (required): The use of a human name ( https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-NameUse-1 ) |
-|  - - family | 0..1 | **Mandatory** | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | Family name (often called 'Surname') |
-|  - - given | 0..* | **Mandatory** | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | Given names (not always 'first'). Includes middle names |
-|  - - prefix | 0..* | **Required** | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | Parts that come before the name |
-|  - - suffix | 0..* | **Required** | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | Parts that come after the name |
-|  - gender | 0..1 | **Mandatory** | [Code](http://hl7.org/fhir/stu3/datatypes.html#code) | male <code>&amp;#124;</code> female <code>&amp;#124;</code> other <code>&amp;#124;</code> unknown<br/>Binding (required): The gender of a person used for administrative purposes. (https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-AdministrativeGender-1 ) |
-|  - birthDate | 0..1 | **Mandatory** | [Date](http://hl7.org/fhir/stu3/datatypes.html#date) | The date of birth for the individual |
-|  - - extension (patient-birthTime) | 0..1 | **Mandatory** | [Extension](http://hl7.org/fhir/stu3/extensibility.html#Extension) | The time of day that the Patient was born. This includes the date to ensure that the timezone information can be communicated effectively.<br/>Constraint (ext-1): Must have either extensions or value[x], not both<br/>URL: http://hl7.org/fhir/StructureDefinition/patient-birthTime |
-|  - address | 0..* | **Mandatory** | [Address](http://hl7.org/fhir/stu3/datatypes.html#address) | Addresses for the individual |
-|  - - use | 0..1 | **Mandatory** | [Code](http://hl7.org/fhir/stu3/datatypes.html#code) | home <code>&amp;#124;</code> work <code>&amp;#124;</code> temp <code>&amp;#124;</code> old - purpose of this address<br/>Binding (required): The use of an address ( http://hl7.org/fhir/stu3/valueset-address-use.html ) |
-|  - - line | 0..* | **Mandatory** | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | Street name, number, direction & P.O. Box etc. |
-|  - - city | 0..1 | **Mandatory** | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | Name of city, town etc. |
-|  - - postalCode | 0..1 | **Mandatory** | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | Postal code for area |
-|  - multipleBirth[x] | 0..1 | **Mandatory** | Boolean <code>&amp;#124;</code> Integer | Whether patient is part of a multiple birth |
+|  Patient | ​ |  |  | Information about an individual receiving health care services<br/>Constraint (dom-2): If the resource is contained in another resource, it SHALL NOT contain nested Resources<br/>Constraint (dom-1): If the resource is contained in another resource, it SHALL NOT contain any narrative<br/>Constraint (dom-4): If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated<br/>Constraint (dom-3): If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource |
+|  - meta | 0..1 | Mandatory | [Meta](http://hl7.org/fhir/stu3/resource.html#Meta "Meta") | Metadata about the resource. <font color="red">The profile element MUST contain the value https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-NHSD-Patient-1</font>  |
+|  - identifier | 0..* | Mandatory | [Identifier](http://hl7.org/fhir/stu3/datatypes.html#identifier "Identifier") | An identifier for this patient<br/>Slicing: Discriminator: system, Ordering: false, Rules: Open at End |
+|  - - identifier (nhsNumber) | 0..1 | Mandatory | [Identifier](http://hl7.org/fhir/stu3/datatypes.html#identifier "Identifier") | The patient's NHS number |
+|  - - extension (nhsNumberVerificationStatus) | 1..1 | Mandatory | [Extension-CareConnect-NHSNumberVerificationStatus-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-NHSNumberVerificationStatus-1 "Extension-CareConnect-NHSNumberVerificationStatus-1") | NHS number verification status<br/>Constraint (ext-1): Must have either extensions or value[x], not both<br/>[See mapping for nhsNumberVerificationStatus for further info](explore_birth_details.html#mapping-for-nhsNumberVerificationStatus)<br/> |
+|  - - system | 1..1 | Mandatory | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri "Uri") | The namespace for the identifier value<br/><font color='red'>Fixed Value: https://fhir.nhs.uk/Id/nhs-number</font> |
+|  - - value | 1..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | The value that is unique. <font color='red'>MUST contain a valid NHS Number</font> |
+|  - name | 1..* | Mandatory | [HumanName](http://hl7.org/fhir/stu3/datatypes.html#humanname "HumanName") | A name associated with the patient<br/>Slicing: Discriminator: use, Ordering: false, Rules: Open at End |
+|  - name (official) | 1..1 | Mandatory | [HumanName](http://hl7.org/fhir/stu3/datatypes.html#humanname "HumanName") | A name associated with the patient |
+|  - - use | 1..1 | Mandatory | [Code](http://hl7.org/fhir/stu3/datatypes.html#code "Code") | usual : official :  temp : nickname : anonymous : old : maiden. Binding (required): The use of a human name. [See FHIR STU3 for further info]( https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-NameUse-1 )<font color='red'> MUST contain the value 'official'</font> |
+|  - - text | 0..1 | Required | String | Text representation of the full name |
+|  - - family | 1..1 | Mandatory | String | Family name (often called 'Surname') |
+|  - - given | 0..* | Mandatory | String | Given names (not always 'first'). Includes middle names |
+|  - - prefix | 0..* | Required | String | Parts that come before the name |
+|  - - suffix | 0..* | Required | String | Parts that come after the name |
+|  - gender | 0..1 | Mandatory | [Code](http://hl7.org/fhir/stu3/datatypes.html#code "Code") | male : female : other : unknown Binding (required): The gender of a person used for administrative purposes.[See FHIR STU3 for further info](https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-AdministrativeGender-1) |
+|  - birthDate | 0..1 | Mandatory | [Date](http://hl7.org/fhir/stu3/datatypes.html#date "Date") | The date of birth for the individual |
+|  - - extension (patient-birthTime) | 0..1 | Mandatory | http://hl7.org/fhir/StructureDefinition/patient-birthTime | The time of day that the Patient was born. This includes the date to ensure that the timezone information can be communicated effectively.<br/>Constraint (ext-1): Must have either extensions or value[x], not both<br/>[See mapping for patient-birthTime](explore_birth_details.html#patient-birthTime) for further info. |
+|  - address | 0..* | Mandatory | [Address](http://hl7.org/fhir/stu3/datatypes.html#address "Address") | Addresses for the individual |
+|  - - use | 0..1 | Mandatory | [Code](http://hl7.org/fhir/stu3/datatypes.html#code "Code") | home : work : temp : old - purpose of this address<br/>Binding (required): The use of an address [See FHIR STU3 for further info](http://hl7.org/fhir/stu3/valueset-address-use.html) |
+|  - - line | 0..* | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Street name, number, direction & P.O. Box etc. |
+|  - - city | 0..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Name of city, town etc. |
+|  - - postalCode | 0..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Postal code for area |
+|  - multipleBirth[x] | 0..1 | Mandatory | Boolean | Integer | Whether patient is part of a multiple birth <font color='red'>Use Boolean datatype and value false for non multiple births. Use Integer datatype with value of number of births for multiple births</font> |
 
 
 
