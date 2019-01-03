@@ -74,32 +74,30 @@ Bundle Resource Implementation
 
 |>|Level 1|[Encounter Resource](http://hl7.org/fhir/stu3/encounter.html)|>|Level 2| [CareConnect-Encounter-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Encounter-1)|>|Level 3|[CareConnect-NHSD-Encounter-1 Profile](http://xxx)|
 
-|**View Used FHIR Elements**|    |**[View All FHIR Elements](explore_birth_details_all.html#mapping-for-encounter)**|
 
 |  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for DCH Implementation** |
 |  ------ | ------ | ------ | ------ | ------ |
 |  Encounter | ​ |  |  | An interaction during which services are provided to the patient<br/>Constraint (dom-2): If the resource is contained in another resource, it SHALL NOT contain nested Resources<br/>Constraint (dom-1): If the resource is contained in another resource, it SHALL NOT contain any narrative<br/>Constraint (dom-4): If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated<br/>Constraint (dom-3): If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource |
-|  - meta | 0..1 | Mandatory | [Meta](http://hl7.org/fhir/stu3/resource.html#Meta) | <font color="red">The profile element MUST contain the value https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-NHSD-Encounter-1</font> |
+|  - meta | 0..1 | Mandatory | [Meta](http://hl7.org/fhir/stu3/resource.html#Meta) | <font color='red'>The value attribute of the  profile element MUST contain the value https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-NHSD-Encounter-1</font> |
 |  - identifier | 0..1 | Mandatory | [Identifier](http://hl7.org/fhir/stu3/datatypes.html#identifier) | Identifier(s) by which this encounter is known. |
 |  - - system | 1..1 | Mandatory | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri) | The namespace for the identifier value. <font color="red">MUST contain the value 'https://tools.ietf.org/html/rfc4122'.</font> |
 |  - - value | 1..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | The value that is unique. <font color="red">MUST contain a UUID</font> |
-|  - status | 1..1 | Mandatory | [Code](http://hl7.org/fhir/stu3/datatypes.html#code) | [planned : arrived : triaged : in-progress : onleave : finished : cancelled. Binding (required): Current state of the encounter <font color='red'>MUST contain the value 'completed'</font>( http://hl7.org/fhir/stu3/valueset-encounter-status.html)](http://hl7.org/fhir/stu3/valueset-encounter-status.html)) |
-|  - type | 0..* | Mandatory | [CodeableConcept](http://hl7.org/fhir/stu3/datatypes.html#codeableconcept) | Code defined by a terminology system<br/>Binding (required): The type of Child Health encounter ( https://fhir.nhs.uk/STU3/ValueSet/DCH-ChildHealthEncounterType-1 ) |
+|  - status | 1..1 | Mandatory | [Code](http://hl7.org/fhir/stu3/datatypes.html#code) | planned : arrived : triaged : in-progress : onleave : finished : cancelled. Binding (required): Current state of the encounter. [See FHIR STU3 for further info](http://hl7.org/fhir/stu3/valueset-encounter-status.html) <font color='red'>MUST contain the value 'completed'</font> |
+|  - type | 0..* | Mandatory | [CodeableConcept](http://hl7.org/fhir/stu3/datatypes.html#codeableconcept) | Code defined by a terminology system<br/>Binding (required): [The type of Child Health encounter]( https://fhir.nhs.uk/STU3/ValueSet/DCH-ChildHealthEncounterType-1) |
 |  - - coding | 0..* | Mandatory | [Coding](http://hl7.org/fhir/stu3/datatypes.html#coding) | Code defined by a terminology system<br/>Slicing: Discriminator: system, Ordering: false, Rules: Open |
 |  - - system | 1..1 | Mandatory | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri) | Identity of the terminology system. <font color='red'>MUST contain the value 'https://fhir.nhs.uk/STU3/ValueSet/DCH-ChildHealthEncounterType-1'</font> |
 |  - - code | 1..1 | Mandatory | [Code](http://hl7.org/fhir/stu3/datatypes.html#code) | Symbol in syntax defined by the system. <font color='red'>MUST contain the value '003'.</font> |
 |  - - display | 1..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | Representation defined by the system. <font color='red'>MUST contain the value 'Birth'.</font> |
 |  - subject | 1..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html) | The patient present at the encounter<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided. |
-|   |  | Mandatory | [CareConnect-NHSD-Patient-1](http://xxx) | [A patient resource in the bundle.<font color='red'>This MUST be to the Patient resource profiled as CareConnect-NHSD-Patient-1</font>](explore_birth_details.html#mapping-for-patient) |
-|  - - reference | 1..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | Literal reference, Relative, internal or absolute URL <font color='red'>a reference to the patient resource instance in the message in the format of  a UUID prefixed with 'urn:uuid:'.</font> |
-|  - - display | 0..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | Text alternative for the resource |
-|   | 0.1 | Mandatory | CareConnect-NHSD-Location |  |
-|  - - - reference | 0..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | Literal reference, Relative, internal or absolute URL |
-|  - - - display | 0..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | Text alternative for the resource |
+|   |  | Mandatory | [CareConnect-NHSD-Patient-1](http://xxx) | A patient resource in the bundle.<font color='red'>This MUST be to the Patient resource profiled as CareConnect-NHSD-Patient-1</font> See [Mapping for Patient](explore_birth_details.html#mapping-for-patient) for further info. |
+|  - - reference | 1..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | Literal reference, Relative, internal or absolute URL <font color='red'>a reference to the Patient resource instance in the message in the format of  a UUID prefixed with 'urn:uuid:'.</font> |
+|   | 0.1 | Mandatory | CareConnect-NHSD-Location | A location resource in the bundle.<font color='red'>This MUST be to the Location resource profiled as CareConnect-NHSD-Location-1</font> See [Mapping for Location](explore_birth_details.html#mapping-for-location) for further info. |
+|  - - - reference | 0..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | Literal reference, Relative, internal or absolute URL <font color='red'>a reference to the location resource instance in the message in the format of  a UUID prefixed with 'urn:uuid:'.</font> |
+|  - - - display | 0..1 | Optional | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | Text alternative for the resource |
 |  - - serviceProvider | 1..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html) | The custodian organization of this Encounter record<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
-|   |  | Mandatory | [CareConnect-NHSD-Organization-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-NHSD-Organization-1) | [An organization resource in the bundle.<font color='red'>This MUST be to the Organization resource profiled as CareConnect-NHSD-Organization-1</font>](explore_birth_details.html#mapping-for-organization) |
-|  - - - reference | 1..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | Literal reference, Relative, internal or absolute URL |
-|  - - - display | 0..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | Text alternative for the resource |
+|   |  | Mandatory | [CareConnect-NHSD-Organization-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-NHSD-Organization-1) | An organization resource in the bundle.<font color='red'>This MUST be to the Organization resource profiled as CareConnect-NHSD-Organization-1</font> [See mapping for Organization for further info](explore_birth_details.html#mapping-for-organization) |
+|  - - - reference | 1..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | Literal reference, Relative, internal or absolute URL <font color='red'>a reference to the Organization resource instance in the message in the format of  a UUID prefixed with 'urn:uuid:'.</font> |
+|  - - - display | 0..1 | Optional | [String](http://hl7.org/fhir/stu3/datatypes.html#string) | Text alternative for the resource |
 
 
 ## Mapping for Patient ##
