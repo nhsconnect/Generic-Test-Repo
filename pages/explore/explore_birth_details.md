@@ -132,7 +132,7 @@ Bundle Resource Implementation
 |  - - line | 0..* | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Street name, number, direction & P.O. Box etc. |
 |  - - city | 0..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Name of city, town etc. |
 |  - - postalCode | 0..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Postal code for area |
-|  - multipleBirth[x] | 0..1 | Mandatory | Boolean | Integer | Whether patient is part of a multiple birth <font color='red'>Use Boolean datatype and value false for non multiple births. Use Integer datatype with value of number of births for multiple births</font> |
+|  - multipleBirth[x] | 0..1 | Mandatory | Boolean : Integer | Whether patient is part of a multiple birth <font color='red'>Use Boolean datatype and value false for non multiple births. Use Integer datatype with value of number of births for multiple births</font> |
 
 
 
