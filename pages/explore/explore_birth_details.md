@@ -20,11 +20,12 @@ The following FHIR profiles are used to form the Birth Details Event Message Bun
 - [CareConnect-NHSD-Procedure-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-DCH-NeonatalResuscitationMethod-Procedure-1)
 - [CareConnect-NHSD-Location-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-DCH-Delivery-Location-1)
 
+## Birth Details Bundle structure ##
+
+<img src="images/explore/Drawing1.pdf" style="width:90%;max-width: 90%;">
+
 ## Birth Details Event data item mapping to FHIR profiles ##
 
-The Child Health Event data items are fulfilled by elements within the FHIR resources listed below:
-
-Bundle Resource Implementation
 
 ## Mapping for Bundle ##
 
