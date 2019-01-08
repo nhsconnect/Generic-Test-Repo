@@ -26,14 +26,14 @@
 	</defs>
 	<g>
 		<title>Page-1</title>
-		<a xlink:href="explore_birth_details.html#mapping-for-bundle">
+		<a xlink:href="https://nhsconnect.github.io/Generic-Test-Repo/explore_birth_details.html#mapping-for-bundle">
 			<g id="shape1-1" transform="translate(18.25,-315.332)">
 				<title>Bundle</title>
 				<desc>Bundle</desc>
 				<rect x="0" y="333.582" width="91.2756" height="68.4567" class="st1"/>
 				<text x="31.4" y="370.81" class="st2">Bundle</text>			</g>
 		</a>
-		<a xlink:href="explore_birth_details.html#mapping-for-messagheader">
+		<a xlink:href="https://nhsconnect.github.io/Generic-Test-Repo/explore_birth_details.html#mapping-for-messagheader">
 			<g id="shape2-4" transform="translate(117.463,-226.201)">
 				<title>MessageHeader</title>
 				<desc>MessageHeader</desc>
@@ -46,7 +46,7 @@
 			<path d="M0 402.04 L0 456.94 L46.53 456.94" class="st3"/>
 			<rect x="-6.07428" y="451.478" width="12.1487" height="9.59985" class="st5"/>
 			<text x="-6.07" y="458.68" class="st6">1..1</text>		</g>
-		<a xlink:href="explore_birth_details.html#mapping-for-encounter">
+		<a xlink:href="https://nhsconnect.github.io/Generic-Test-Repo/explore_birth_details.html#mapping-for-encounter">
 			<g id="shape4-15" transform="translate(267.132,-202.502)">
 				<title>Encounter</title>
 				<desc>Encounter</desc>
@@ -71,14 +71,14 @@
 			<path d="M0 402.04 L10.63 402.04 L10.63 425.74 L51.35 425.74" class="st3"/>
 			<rect x="11.273" y="420.938" width="12.1487" height="9.59985" class="st5"/>
 			<text x="11.27" y="428.14" class="st6">1..1</text>		</g>
-		<a xlink:href="explore_birth_details.html#mapping-for-patient">
+		<a xlink:href="https://nhsconnect.github.io/Generic-Test-Repo/explore_birth_details.html#mapping-for-patient">
 			<g id="shape8-39" transform="translate(118.328,-131.636)">
 				<title>Patient</title>
 				<desc>Patient</desc>
 				<rect x="0" y="333.582" width="91.2756" height="68.4567" class="st1"/>
 				<text x="31.05" y="370.81" class="st2">Patient</text>			</g>
 		</a>
-		<a xlink:href="explore_birth_details.html#mapping-for-procedure">
+		<a xlink:href="https://nhsconnect.github.io/Generic-Test-Repo/explore_birth_details.html#mapping-for-procedure">
 			<g id="shape9-42" transform="translate(117.463,-18.25)">
 				<title>Procedure</title>
 				<desc>Procedure</desc>
