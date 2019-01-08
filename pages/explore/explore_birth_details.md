@@ -22,7 +22,7 @@ The following FHIR profiles are used to form the Birth Details Event Message Bun
 
 ## Birth Details Bundle structure ##
 
-{% include image.html file="images/explore/Birth_details.svg" max-width="100" %}
+
 
 <img src="images/explore/Birth_details.svg" style="width:90%;max-width: 90%;">
 
