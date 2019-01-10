@@ -110,7 +110,9 @@ How to populate the Encounter instance to conform to the profiles below:
 
 ## Mapping for Patient ##
 
-How to populate the Patient instance using - [Careconnect-Patient-1](http://hl7.org/fhir/stu3/StructureDefinition/CareConnect-Patient-1)
+How to populate the Patient instance to conform to the profiles below:
+
+|**Level 1**|[Patient Resource](http://hl7.org/fhir/stu3/patient.html)|**Level 2**|[CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1)|**Level 3**|None|
 
 
 
