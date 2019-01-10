@@ -32,7 +32,8 @@ The following FHIR profiles are used to form the Birth Details Event Message Bun
 
 
 |-|Level 1|[Bundle Resource](http://hl7.org/fhir/stu3/bundle.html)|- - |Level 2| None|- - -|Level 3|[NHSD-Bundle-1 Profile](http://xxx)|
-|||**View Used FHIR Elements**||||||**[View All FHIR Elements](explore_birth_details_all.html#mapping-for-bundle)**|
+
+|**View Used FHIR Elements**|**[View All FHIR Elements](explore_birth_details_all.html#mapping-for-bundle)**|
 
 How to populate the Bundle instance  using - [NHSD-Bundle-1](https://fhir.nhs.uk/STU3/StructureDefinition/NHSD-Bundle-1)
    
