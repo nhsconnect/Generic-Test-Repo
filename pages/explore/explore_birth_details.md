@@ -9,16 +9,16 @@ summary: "The FHIR profiles used for the Birth Details Event Message Bundle"
 
 The following FHIR profiles are used to form the Birth Details Event Message Bundle:
 
-- [NHSD-Bundle-1](https://fhir.nhs.uk/STU3/StructureDefinition/DCH-Bundle-1)
-- [NHSD-MessageHeader-1](https://fhir.nhs.uk/STU3/StructureDefinition/DCH-MessageHeader-1)
-- [CareConnect-NHSD-Organization-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1)
+- [NHSD-Bundle-1](https://fhir.nhs.uk/STU3/StructureDefinition/NHSD-Bundle-1)
+- [NHSD-MessageHeader-1](https://fhir.nhs.uk/STU3/StructureDefinition/NHSD-MessageHeader-1)
+- [CareConnect-Organization-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1)
 - [NHSD-HealthcareService-1](https://fhir.nhs.uk/STU3/StructureDefinition/DCH-HealthcareService-1)
-- [CareConnect-NHSD-Patient-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-DCH-Patient-1)
-- [CareConnect-NSHD-Encounter-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-DCH-Encounter-1)
-- [CareConnect-NHSD-Condition-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-DCH-PhysicalProblemAtBirth-Condition-1)
-- [CareConnect-NHSD-Observation-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-DCH-APGARScore-Observation-1)
-- [CareConnect-NHSD-Procedure-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-DCH-NeonatalResuscitationMethod-Procedure-1)
-- [CareConnect-NHSD-Location-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-DCH-Delivery-Location-1)
+- [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1)
+- [CareConnect-Encounter-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Encounter-1)
+- [CareConnect-Condition-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Condition-1)
+- [CareConnect-Observation-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)
+- [CareConnect-Procedure-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Procedure-1)
+- [CareConnect-Location-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Location-1)
 
 ## Birth Details Bundle structure ##
 
@@ -30,14 +30,11 @@ The following FHIR profiles are used to form the Birth Details Event Message Bun
 
 ## Mapping for Bundle ##
 
+How to populate the Bundle instance to conform to the profiles below:
 
 |**Level 1**|[Bundle Resource](http://hl7.org/fhir/stu3/bundle.html)|**Level 2**| None|**Level 3**|[NHSD-Bundle-1 Profile](http://xxx)|
 
 |**View Used FHIR Elements**|**[View All FHIR Elements](explore_birth_details_all.html#mapping-for-bundle)**|
-
-How to populate the Bundle instance  using - [NHSD-Bundle-1](https://fhir.nhs.uk/STU3/StructureDefinition/NHSD-Bundle-1)
-   
-
 
 
 |  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for DCH Implementation** |
@@ -52,7 +49,9 @@ How to populate the Bundle instance  using - [NHSD-Bundle-1](https://fhir.nhs.uk
 
 ## Mapping for MessageHeader ##
 
-How to populate the MessageHeader instance  using - [NHSD-MessageHeader-1](https://fhir.nhs.uk/STU3/StructureDefinition/NHSD-MessageHeader-1)
+How to populate the MessageHeader instance to conform to the profiles below:
+
+|**Level 1**|[MessageHeader Resource](http://hl7.org/fhir/stu3/messageHeader.html)|**Level 2**| None|**Level 3**|[NHSD-MessageHeader-1 Profile](http://xxx)|
 
 |**View Used FHIR Elements**|    |**[View All FHIR Elements](explore_birth_details_all.html#mapping-for-messageheader)**|
 
@@ -79,7 +78,9 @@ How to populate the MessageHeader instance  using - [NHSD-MessageHeader-1](https
 
 ## Mapping for Encounter ##
 
-How to populate the Encounter instance  using - [Careconnect-Encounter-1](http://hl7.org/fhir/stu3/StructureDefinition/CareConnect-Encounter-1)
+How to populate the Encounter instance to conform to the profiles below:
+
+|**Level 1**|[Encounter Resource](http://hl7.org/fhir/stu3/encounter.html)|**Level 2**|[CareConnect-Encounter-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Encounter-1)|**Level 3**|None|
 
 
 |  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for DCH Implementation** |
