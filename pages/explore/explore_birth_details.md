@@ -30,9 +30,13 @@ The following FHIR profiles are used to form the Birth Details Event Message Bun
 
 ## Mapping for Bundle ##
 
+
 |>|Level 1|[Bundle Resource](http://hl7.org/fhir/stu3/bundle.html)|>|Level 2| None|>|Level 3|[NHSD-Bundle-1 Profile](http://xxx)|
+|**View Used FHIR Elements**|   || |**[View All FHIR Elements](explore_birth_details_all.html#mapping-for-bundle)**|
+
+How to populate the Bundle instance  using - [NHSD-Bundle-1](https://fhir.nhs.uk/STU3/StructureDefinition/NHSD-Bundle-1)
    
-|**View Used FHIR Elements**|    |**[View All FHIR Elements](explore_birth_details_all.html#mapping-for-bundle)**|
+
 
 
 |  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for DCH Implementation** |
@@ -47,7 +51,7 @@ The following FHIR profiles are used to form the Birth Details Event Message Bun
 
 ## Mapping for MessageHeader ##
 
-|>|Level 1|[MessageHeader Resource](http://hl7.org/fhir/stu3/messageHeader.html)|>|Level 2| None|>|Level 3|[NHSD-MessageHeader-1 Profile](http://xxx)|
+How to populate the MessageHeader instance  using - [NHSD-MessageHeader-1](https://fhir.nhs.uk/STU3/StructureDefinition/NHSD-MessageHeader-1)
 
 |**View Used FHIR Elements**|    |**[View All FHIR Elements](explore_birth_details_all.html#mapping-for-messageheader)**|
 
@@ -74,7 +78,7 @@ The following FHIR profiles are used to form the Birth Details Event Message Bun
 
 ## Mapping for Encounter ##
 
-|>|Level 1|[Encounter Resource](http://hl7.org/fhir/stu3/encounter.html)|>|Level 2| [CareConnect-Encounter-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Encounter-1)|>|Level 3|[CareConnect-NHSD-Encounter-1 Profile](http://xxx)|
+How to populate the Encounter instance  using - [Careconnect-Encounter-1](http://hl7.org/fhir/stu3/StructureDefinition/CareConnect-Encounter-1)
 
 
 |  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for DCH Implementation** |
@@ -104,7 +108,9 @@ The following FHIR profiles are used to form the Birth Details Event Message Bun
 
 ## Mapping for Patient ##
 
-|>|Level 1|[Patient Resource](http://hl7.org/fhir/stu3/patient.html)|>|Level 2| [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1)|>|Level 3|[CareConnect-NHSD-Patient-1 Profile](http://xxx)|
+How to populate the Patient instance using - [Careconnect-Patient-1](http://hl7.org/fhir/stu3/StructureDefinition/CareConnect-Patient-1)
+
+
 
 |**View Used FHIR Elements**|    |**[View All FHIR Elements](explore_birth_details_all.html#mapping-for-patient)**|
 
