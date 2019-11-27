@@ -40,7 +40,7 @@ Only two releases of the UK Core will be supported concurrently, and it is deeme
 
 The diagram below illustrates the release cycle of the UK Core.
 
-{% include img.html img="release_diagram.svg" %}
+{% include img.html img="_includes/release_diagram.svg" %}
 
 Note: Due to the time required to implement a UK Core based solution, it is anticipated there will be a requirement to have two live releases at any one time. 
 
